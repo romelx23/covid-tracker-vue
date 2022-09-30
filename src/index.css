@@ -1,0 +1,113 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+}
+
+a {
+  font-weight: 500;
+  color: #646cff;
+  text-decoration: inherit;
+}
+a:hover {
+  color: #535bf2;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  place-items: center;
+}
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+}
+
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #1a1a1a;
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+button:hover {
+  border-color: #646cff;
+}
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+.card {
+  padding: 2em;
+}
+
+#app {
+  min-height: 100vh;
+  width: 100%;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+  a:hover {
+    color: #747bff;
+  }
+  button {
+    background-color: #f9f9f9;
+  }
+}
+
+.btn {
+  @apply bg-emerald-500 text-white font-bold py-2 px-4 rounded;
+}
+
+.sidebar__item {
+  @apply flex items-center gap-4 px-3 pt-2 pb-1 text-white text-lg transition hover:shadow-md hover:shadow-gray-600 font-semibold hover:text-emerald-500;
+}
+
+a.router-link-active {
+  @apply text-emerald-500;
+}
+
+.card {
+  @apply flex flex-col items-center justify-center bg-emerald-700 rounded-md text-emerald-400 hover:text-green-400 hover:shadow-md hover:shadow-green-400 hover:cursor-pointer transition;
+}
+
+.drawer {
+  @apply h-screen max-w-[200px] bg-gray-700/60 rounded-r-3xl pt-4 border-4 border-emerald-500/50 space-y-4 overflow-y-auto transition hidden md:block;
+}
+
+.drawer__close {
+  @apply absolute -translate-x-48 transition;
+}
+
+.drawer__open {
+  @apply w-[200px] translate-x-0;
+}
+
+.bottom-bar {
+  @apply fixed bottom-0 left-0 w-full h-16 bg-gray-700/60 rounded-t-3xl border-4 border-emerald-500/50 flex items-center justify-center transition md:hidden;
+}
